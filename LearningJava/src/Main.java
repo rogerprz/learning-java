@@ -4,13 +4,28 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int inputtedNum = scanner.nextInt();
+       String question = "What is your favorite color";
+       String choice1 = "blue";
+       String choice2 = "red";
+       String choice3= "green";
 
-        if (inputtedNum < 5) {
-            System.out.println("Enjoy life");
-        } else {
-            System.out.println("Hate life");
-        }
+       String correctAnswer = choice2;
+       boolean guessedCorrectAnswer = true;
+       while (guessedCorrectAnswer) {
+           System.out.println(question);
+           Scanner input = new Scanner(System.in);
+           String answer = input.next();
+
+           if (answer.equals(choice1.toLowerCase())) {
+               System.out.println(("Good try, but " + choice1) + " is not correct");
+
+           } else if (answer.equals(choice2)) {
+               System.out.println(("Great, " + choice2) + " is correct");
+               guessedCorrectAnswer = false;
+           } else if (answer.equals(choice3)) {
+               System.out.println(("Good try, but " + choice3) + " is not correct");
+           }
+       }
+       System.out.println("END PROGRAM");
     }
 }
