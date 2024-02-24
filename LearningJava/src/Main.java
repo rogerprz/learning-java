@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -18,6 +20,11 @@ public class Main {
         System.out.println(firstInitial);
         System.out.println(lastInitial);
 
+        System.out.println(firstName + " " + lastName + " has a gpa of " + gpa);
+        Scanner input = new Scanner(System.in);
 
+        gpa = input.nextDouble();
+
+        System.out.println(firstName + " "+ lastName + " no has a GPA of " + gpa);
     }
 }
