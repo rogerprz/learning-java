@@ -1,18 +1,18 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void announceDeveloperTeaTime() {
-        System.out.println(("Waiting for tea time"));
-        System.out.println("Type a random word..:");
-        Scanner input = new Scanner(System.in);
 
-        input.next();
-        System.out.println("It's tea time");
+    public static double employeeWeeklySalary(double hours, double hourlyRate) {
+        if (hours < 0 || hourlyRate < 1) {
+            System.out.println("Negative values are not allowed");
+            return -1;
+        }
+        return hours * hourlyRate * 52;
     }
+    
     public static void main(String[] args) {
-       String question = "What is your favorite color";
-       String choice1 = "blue";
+      double result = employeeWeeklySalary(40, 35);
+      System.out.println("Payout: $" + result);
 
-       announceDeveloperTeaTime();
     }
 }
